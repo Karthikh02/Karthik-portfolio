@@ -49,16 +49,16 @@ const ContactPage=()=>{
                     <div className="form">
                         <form ref={form} onSubmit={sendemail}>
                             <label htmlFor="">Name :</label>
-                            <input type="text" name="name" placeholder='Enter your Name' />
+                            <input type="text" name="name" placeholder='Enter your Name'  required/>
 
                             <label htmlFor="">Phone No:</label>
-                            <input type="tel" name="phone" placeholder='Enter your Phone number'/>
+                            <input type="tel" name="phone" placeholder='Enter your Phone number' pattern="[0-9]{10}" title="Please enter a value 10-digit phone number" required/>
 
                             <label htmlFor="">Email :</label>
-                            <input type="email" name="email" placeholder='Enter your Email'/>
+                            <input type="email" name="email" placeholder='Enter your Email' required/>
 
                             <label htmlFor="">Message :</label>
-                            <textarea name="message" rows={5} placeholder='Enter Your Message '></textarea>
+                            <textarea name="message" rows={5} placeholder='Enter Your Message' required></textarea>
 
                             <button type='Submit'>Send Message</button>
                         </form>
