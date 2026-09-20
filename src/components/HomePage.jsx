@@ -7,7 +7,7 @@ import ContactPage from './ContactPage'
 const HomePage = () => {
   
   let resume_view=()=>{
-    window.open("/Resume/Karthik_Resume.pdf")
+    window.open("/Resume/Karthik_Resume-1.pdf")
   }
 
   return (
@@ -49,7 +49,8 @@ const HomePage = () => {
             </div>
             <div className="right">
               <div className="img">
-                 <img src="./images/img.jpeg" alt="NO IMAGE" />
+                 {/* <img src="./images/img.jpeg" alt="NO IMAGE" /> */}
+                  <img src="./images/Profile_photo.jpeg" alt="NO IMAGE" />
               </div>
             </div>
         </div>

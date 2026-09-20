@@ -41,8 +41,21 @@ const ContactPage=()=>{
                         <span><LocationOnIcon/></span>Bangalore,Karnataka
                     </div>
                      <div className="link">
-                        <img src="./images/Linkedin_logo2.png" alt="" />
-                        <img src="/images/github_logo2.png" alt="GitHub log" />
+                    <a
+                    href="https://www.linkedin.com/in/Karthikh28"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        <img src="./images/Linkedin_logo2.png" alt="LinkedIn" />
+                    </a>
+
+                        <a
+                            href="https://github.com/karthikh02"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="/images/github_logo2.png" alt="GitHub log" />
+                        </a>
                     </div>
                         </div>
                 <div className="right">
