@@ -7,7 +7,7 @@ import ContactPage from './ContactPage'
 const HomePage = () => {
   
   let resume_view=()=>{
-    window.open("/Resume/Karthik_Resume-1.pdf")
+    window.open("/Resume/Karthik_Resume_1.pdf")
   }
 
   return (
