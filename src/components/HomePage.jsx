@@ -3,6 +3,7 @@ import AboutPage from './AboutPage'
 import SkillsPage from './SkillsPage'
 import ProjectPage from './ProjectPage'
 import ContactPage from './ContactPage'
+import Adminpanel from './Adminpanel'
 
 const HomePage = () => {
   
@@ -65,6 +66,9 @@ const HomePage = () => {
         </div>
         <div className="ContactPage">
           <ContactPage/>
+        </div>
+        <div className="Adminpanel">
+          <Adminpanel/>
         </div>
         <div className="footer">
           <p>© 2026 | Code • Analyze • Innovate | Designed & Developed by <span>Karthik H</span></p>

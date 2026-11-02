@@ -40,6 +40,8 @@ const Navbar = () => {
                                 <li><NavLink to={'./skills'} onClick={closemenu}>Skills</NavLink></li>
                                 <li><NavLink to={'./allProjects'} onClick={closemenu}>Projects</NavLink></li>
                                 <li><NavLink to={'./ContactP'} onClick={closemenu}>Contact</NavLink></li>
+                                {/* <li><NavLink to={'./AdminLogin'} onClick={closemenu}>AdminLogin</NavLink></li> */}
+
                             </ul>
                     </div>
                 </div>

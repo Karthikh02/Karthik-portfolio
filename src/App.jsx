@@ -8,6 +8,8 @@ import ProjectPage from './components/ProjectPage'
 import ProjectPage2 from './components/ProjectPage2'
 import ContactPage from './components/ContactPage'
 import BackButton from './components/BackButton'
+import Adminpanel from './components/Adminpanel'
+import AdminLogin from './components/AdminLogin'
 import { createContext } from 'react'
 
 
@@ -26,6 +28,8 @@ function App() {
           <Route element={<SkillsPage/>} path='/skills'/>
           <Route element={<ProjectPage/>} path='/projects'/>
           <Route element={<ProjectPage2/>} path='/allProjects'/>
+          {/* <Route element={<Adminpanel/>} path='/Adminpanel'/> */}
+          {/* <Route element={<AdminLogin/>} path='/AdminLogin'/> */}
           <Route element={<ContactPage/>} path='/ContactP'/>
       </Routes>
       </MyContext.Provider>

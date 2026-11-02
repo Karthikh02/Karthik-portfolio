@@ -8,23 +8,63 @@ import { MyContext } from "../App";
 const ContactPage=()=>{
     const data=useContext(MyContext)
     const form=useRef()
-    const sendemail =(e)=>{
-        e.preventDefault()
-        emailjs.sendForm(
-            "service_k54xwn7",
-            "template_krodkpk",
-            form.current,
-            "2cK3ud5VhX0C84UHG"
-        )
-        .then(()=>{
-            alert("Message Sent Successfully!")
-            form.current.reset();
-        })
-        .catch((error)=>{
-            console.log(error)
-            alert("Failed To send Message")
-        })
+    
+    const sendemail = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form.current);
+
+        const contactData = {
+            name: formData.get("name"),
+            phone_no: formData.get("phone"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+        };
+
+        try {
+            // Step 1: Send data to Django
+            const response = await fetch(
+                "http://127.0.0.1:8000/api/contact_message/",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(contactData),
+                }
+            );
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            console.log(result);
+            alert("Please check your form details.");
+            return;
+        }
+
+        // Step 2: Send email using EmailJS
+        try {
+            await emailjs.sendForm(
+                "service_k54xwn7",
+                "template_krodkpk",
+                form.current,
+                "2cK3ud5VhX0C84UHG"
+            );
+
+            alert("Message Saved and Email Sent Successfully!");
+        } catch (emailError) {
+            console.log(emailError);
+            alert("Message saved in database, but email notification failed.");
+        }
+
+        form.current.reset();
+
+    } catch (error) {
+        console.log(error);
+        alert("Unable to connect to Django server.");
     }
+};
+
     return(
         <div className="contact_contant">
             <h1>CONTACT <hr /></h1>
