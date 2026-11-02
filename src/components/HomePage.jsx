@@ -67,9 +67,6 @@ const HomePage = () => {
         <div className="ContactPage">
           <ContactPage/>
         </div>
-        <div className="Adminpanel">
-          <Adminpanel/>
-        </div>
         <div className="footer">
           <p>© 2026 | Code • Analyze • Innovate | Designed & Developed by <span>Karthik H</span></p>
         </div>
